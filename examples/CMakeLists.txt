@@ -1,7 +1,7 @@
-set(proto_name greetings)
+set(proto_name helloworld)
 
 # Get proto files
-get_filename_component(proto "../../protos/${proto_name}.proto" ABSOLUTE)
+get_filename_component(proto "../protos/${proto_name}.proto" ABSOLUTE)
 get_filename_component(proto_dir "${proto}" DIRECTORY)
 
 # Generate source files
@@ -20,7 +20,7 @@ add_custom_command(
     DEPENDS "${proto}"
 )
 
-set(targets "${proto_name}_server" "${proto_name}_client")
+set(targets "greeter_async_server" "greeter_async_client")
 
 # Include generated *.pb.h files
 include_directories(${CMAKE_CURRENT_BINARY_DIR})

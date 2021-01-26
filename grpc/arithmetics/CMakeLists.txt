@@ -1,11 +1,4 @@
-# Minimum CMake required
-cmake_minimum_required(VERSION 3.13)
-
-project(gRPC_CPP_Arithmetics VERSION 0.0.1 LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_BUILD_TYPE RelWithDebInfo)
-
-set (proto_name arithmetics)
+set(proto_name arithmetics)
 
 # Get proto files
 get_filename_component(proto "../../protos/${proto_name}.proto" ABSOLUTE)
